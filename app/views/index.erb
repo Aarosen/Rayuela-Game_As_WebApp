@@ -1,0 +1,37 @@
+<header>
+  <img src="img/codea-logo.png" id="logo">
+</header>
+
+<h1 id="main-title">¡RAYUELA!</h1>
+
+    <form action="/receive_info" method="post">
+      Pon los nombres de los dos jugadores
+      <br>
+      <input id="jugador1" type="text" name="Player1">
+      <input id="jugador2" type="text" name="Player2"> 
+      <input type="submit" value="Submit">
+    </form>
+
+    <button id="start_btn">Jugar</button><br><br>
+    <div class="counter"></div>
+      <!-- <a href=".active"> -->
+    <div class="winner"></div>
+    <table class="table">
+      <tr id="Player1">
+        <td id="player1"><strong>Jugador 1</strong></td>
+        <td class="active" id="0"></td>
+        <% 99.times do |i|%>
+          <td id="<%= i + 1 %>"></td>
+        <% end %>
+      </tr>
+
+      <tr id="Player2">
+        <td id="player2"><strong>Jugador 2</strong></td>
+        <td class="active" id="0"></td>
+        <% 99.times do |i|%>
+          <td id="<%= i + 1 %>"></td>
+        <% end %>
+      </tr>
+    </table>
+    <div class="score1"></div>
+    <div class="score2"></div>
